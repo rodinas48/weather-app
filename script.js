@@ -20,7 +20,7 @@ async function checkWeather(city) {
   cityName.innerHTML = data.name;
   humidity.innerHTML = data.main.humidity + "%";
   wind.innerHTML = data.wind.speed + " Km/H";
-  weatherIcon.src = `./assests/${data.weather[0].main}.png`;
+  weatherIcon.src = `assests/${data.weather[0].main.toLowerCase()}.png`;
 
   document.querySelector('.weather').style.display = "block";
   document.querySelector('.error').style.display = "none";
